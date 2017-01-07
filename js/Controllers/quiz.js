@@ -12,9 +12,11 @@ QuizController.$inject=['quizMetrics','DataService'];
      vm.DataService = DataService;
      vm.questionAnswered=questionAnswered;
      vm.activeQuestion=0;
+     vm.error=false;
      vm.selectAnswer=selectAnswer;
      vm.setActiveQuestion= setActiveQuestion;
      var numQuestionsAnswered=0;
+     vm.finalise=false;
 
      function selectAnswer(index) {
          DataService.quizQuestions[vm.activeQuestion].selected=index;
@@ -26,7 +28,10 @@ QuizController.$inject=['quizMetrics','DataService'];
       if(index===undefined) {
           while (!breakOut) {
               vm.activeQuestion = vm.activeQuestion < quizLength ? ++vm.activeQuestion : 0;
-
+                if(vm.activeQuestion===0)
+                {
+                    vm.error=true;
+                }
               if (DataService.quizQuestions[vm.activeQuestion].selected === null) {
                   breakOut = true;
               }
@@ -49,6 +54,17 @@ QuizController.$inject=['quizMetrics','DataService'];
 
              if (numQuestionsAnswered >= quizLength) {
 
+                 for(var i;i<quizLength;i++)
+                 {
+                     if(DataService.quizQuestions[i].selected===null)
+                     {
+                         setActiveQuestion(i);
+                         return;
+                     }
+                 }
+                    vm.error=false;
+                    vm.finalise=true;
+                    return;
              }
          }
              vm.setActiveQuestion();
