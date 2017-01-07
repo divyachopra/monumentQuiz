@@ -2,6 +2,7 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$USER_HOME$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$" vcs="Git" />
     <mapping directory="C:\Users\Divya Chopra\anglurwrkspc\monumentQuiz\.idea\Monument-trivia" vcs="Git" />
     <mapping directory="C:\Users\Divya Chopra\anglurwrkspc\monumentQuiz\Monument-trivia" vcs="Git" />
   </component>

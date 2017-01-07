@@ -12,21 +12,32 @@ QuizController.$inject=['quizMetrics','DataService'];
      vm.DataService = DataService;
      vm.questionAnswered=questionAnswered;
      vm.activeQuestion=0;
+     vm.selectAnswer=selectAnswer;
      vm.setActiveQuestion= setActiveQuestion;
      var numQuestionsAnswered=0;
-     function setActiveQuestion(){
+
+     function selectAnswer(index) {
+         DataService.quizQuestions[vm.activeQuestion].selected=index;
+
+     }
+     function setActiveQuestion(index){
       var breakOut=false;
       var quizLength = DataService.quizQuestions.length-1;
-      while(!breakOut)
-      {
-          vm.activeQuestion= vm.activeQuestion<quizLength?++vm.activeQuestion:0;
+      if(index===undefined) {
+          while (!breakOut) {
+              vm.activeQuestion = vm.activeQuestion < quizLength ? ++vm.activeQuestion : 0;
 
-          if(DataService.quizQuestions[vm.activeQuestion].selected===null)
-          {
-              breakOut = true;
+              if (DataService.quizQuestions[vm.activeQuestion].selected === null) {
+                  breakOut = true;
+              }
           }
       }
+      else
+      {
+            vm.activeQuestion=index;
+      }
      }
+
 
 
      function questionAnswered() {
