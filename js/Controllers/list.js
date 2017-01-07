@@ -16,7 +16,7 @@ function ListController(quizMetrics,DataService){
     vm.search="";
     vm.quizActive=false;
     vm.hideQuiz = function () {
-      quizMetrics.changeState(true);
+      quizMetrics.changeState("quiz",true);
        // vm.quizActive=true;
     };
     function changeActiveMonument(index) {

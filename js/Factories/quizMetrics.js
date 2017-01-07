@@ -7,12 +7,23 @@ fac.factory('quizMetrics', function(){
 
     var quizObj = {
         quizActive: false,
-        changeState: changeState
+        changeState: changeState,
+        resultActive:false
     };
 
     return quizObj;
 
-    function  changeState(state) {
-        quizObj.quizActive = state;
+    function  changeState(metric,state) {
+        if(metric=== "quiz")
+        {
+            quizObj.quizActive = state;
+        }
+        else if(metric==="results")
+        {
+            quizObj.resultActive=state;
+        }
+        else{
+            return false;
+        }
     }
 });

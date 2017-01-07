@@ -17,6 +17,16 @@ QuizController.$inject=['quizMetrics','DataService'];
      vm.setActiveQuestion= setActiveQuestion;
      var numQuestionsAnswered=0;
      vm.finalise=false;
+     vm.finaliseAnswers=finaliseAnswers;
+     
+     function finaliseAnswers() {
+         vm.finalise=false;
+         vm.activeQuestion = 0;
+         numQuestionsAnswered=0;
+         quizMetrics.markQuiz();
+         quizMetrics.changeState("quiz",false);
+         quizMetrics.changeState("results",false);
+     }
 
      function selectAnswer(index) {
          DataService.quizQuestions[vm.activeQuestion].selected=index;
