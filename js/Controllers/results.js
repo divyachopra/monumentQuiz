@@ -5,8 +5,10 @@ var resApp= angular.module('trivia');
 
 resApp.controller('resultCtrl', ResultController);
 
-ResultController.$inject = ['quizMetrics'];
-function ResultController(quizMetrics){
+ResultController.$inject = ['quizMetrics','DataService'];
+function ResultController(quizMetrics,DataService){
     var vm = this;
     vm.quizMetrics = quizMetrics;
+    vm.DataService = DataService;
+    vm.activeQuestion=0
 }

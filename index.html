@@ -161,8 +161,51 @@
     </div><!-- quiz controller -->
 
     <div ng-controller="resultCtrl as results" ng-show="results.quizMetrics.resultActive">
-        <h1>Hello world</h1>
-    </div>
+        <div class="row">
+            <div class="col-xs-8">
+                <h2>Results:</h2>
+                <div class="btn-toolbar">
+                    <button class="btn"
+                    ng-repeat="question in results.DataService.quizQuestions "
+                    ng-class="{'btn-success':question.correct, 'btn-danger': !question.correct}"
+                    ng-click="results.setActiveQuestion($index)">
+                        <span class="glyphicon"
+                              ng-class="{'glyphicon-ok': question.correct, 'glyphicon-remove':!question.correct} "></span>
+                    </button>
+                </div>
+            </div>
+            <div class="col-xs-4">
+                <div class="row">
+                    <h4>Legend:</h4>
+                    <div class="col-sm-4">
+                       <button class="btn btn-success">
+                        <span class="glyphicon glyphicon-ok"></span>
+                       </button>
+                        <p>Correct</p>
+                    </div>
+                    <div class="col-sm-4">
+                        <button class="btn btn-danger">
+                            <span class="glyphicon glyphicon-remove"></span>
+                        </button>
+                        <p>Incorrect</p>
+                    </div>
+                </div>
+            </div>
+        </div><!-- row-->
+
+        <div class="row">
+            <h1>Questions:</h1>
+            <div class="well well-sm">
+                <div class="row">
+                    <div class ="col-xs-12">
+                        <h4>{{results.activeQuestion}}</h4>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div><!--result controller-->
 </div>
 <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
