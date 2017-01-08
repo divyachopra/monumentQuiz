@@ -135,8 +135,8 @@
                         </div>
                         <div class="row" ng-if="quiz.DataService.quizQuestions[quiz.activeQuestion].type==='image'">
                             <div class="col-sm-6" ng-repeat="answer in quiz.DataService.quizQuestions[quiz.activeQuestion].possibilities">
-                                <div class="image-answer" ng-class="{'image-selected':$index===
-                                quiz.DataService.quizQuestions[quiz.activeQuestion].selected}"
+                                <div class="image-answer"
+                                     ng-class="{'image-selected':$index===quiz.DataService.quizQuestions[quiz.activeQuestion].selected}"
                                      ng-click="quiz.selectAnswer($index)">
                                     <img ng-src="{{answer.answer}}">
                                 </div>
