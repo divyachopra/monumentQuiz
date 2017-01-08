@@ -8,7 +8,8 @@ dataFac.factory('DataService',DataFactory);
 function DataFactory(){
     var dataObj = {
         triviaData:monumentsData,
-        quizQuestions:quizQuestions
+        quizQuestions:quizQuestions,
+        correctAnswers:correctAnswers
     };
 
     return dataObj;
