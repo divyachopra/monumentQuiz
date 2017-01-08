@@ -12,11 +12,11 @@ QuizController.$inject=['quizMetrics','DataService'];
      vm.DataService = DataService;
      vm.questionAnswered=questionAnswered;
      vm.activeQuestion=0;
-     vm.error=false;
+     vm.error =false;
      vm.selectAnswer=selectAnswer;
      vm.setActiveQuestion= setActiveQuestion;
      var numQuestionsAnswered=0;
-     vm.finalise=false;
+     vm.finalise =false;
      vm.finaliseAnswers=finaliseAnswers;
      
      function finaliseAnswers() {
@@ -25,7 +25,7 @@ QuizController.$inject=['quizMetrics','DataService'];
          numQuestionsAnswered=0;
          quizMetrics.markQuiz();
          quizMetrics.changeState("quiz",false);
-         quizMetrics.changeState("results",false);
+         quizMetrics.changeState("results",true);
      }
 
      function selectAnswer(index) {
@@ -56,15 +56,15 @@ QuizController.$inject=['quizMetrics','DataService'];
 
 
      function questionAnswered() {
-         console.log("here");
+         //console.log("here");
          var quizLength = DataService.quizQuestions.length;
-         console.log("here " + quizLength +" : "+ vm.activeQuestion.selected );
+         //console.log("here " + quizLength +" : "+ vm.activeQuestion.selected );
          if(DataService.quizQuestions[vm.activeQuestion].selected!== null) {
              numQuestionsAnswered++;
 
              if (numQuestionsAnswered >= quizLength) {
 
-                 for(var i;i<quizLength;i++)
+                 for(var i=0;i<quizLength;i++)
                  {
                      if(DataService.quizQuestions[i].selected===null)
                      {

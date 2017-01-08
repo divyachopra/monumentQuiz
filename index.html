@@ -18,7 +18,7 @@
 
         </h3>
     </div>
-        <div ng-controller="listCtrl as list" ng-hide="list.quizMetrics.quizActive">
+        <div ng-controller="listCtrl as list" ng-hide="list.quizMetrics.quizActive || list.quizMetrics.resultActive">
             <form class="form-inline well well-sm clearfix">
                 <span class="glyphicon glyphicon-search"></span>
                 <input type="text" placeholder="Search..." class="form-control" ng-model="list.search">
@@ -113,9 +113,9 @@
         </div><!-- progress area-->
 
         <div class="row">
-            <div class="alert alert-danger" ng-show="quiz.error">
+            <div class="alert alert-danger" ng-show=quiz.error>
                 Error! You have not answered all the questions!
-                <button class="close" ng-click="quiz.error=false">&times</button>
+                <button class="close" ng-click="quiz.error==false">&times</button>
             </div>
             <h3>Question:</h3>
             <div class="well well-sm" ng-hide="quiz.finalise">
@@ -135,7 +135,7 @@
                         </div>
                         <div class="row" ng-if="quiz.DataService.quizQuestions[quiz.activeQuestion].type==='image'">
                             <div class="col-sm-6" ng-repeat="answer in quiz.DataService.quizQuestions[quiz.activeQuestion].possibilities">
-                                <div class="image-answer"ng-class="{'image-selected':$index===
+                                <div class="image-answer" ng-class="{'image-selected':$index===
                                 quiz.DataService.quizQuestions[quiz.activeQuestion].selected}"
                                      ng-click="quiz.selectAnswer($index)">
                                     <img ng-src="{{answer.answer}}">
@@ -148,16 +148,20 @@
                 </div>
                 <button class="btn btn-warning" ng-click="quiz.questionAnswered()">Continue</button>
             </div>
-            <div class="well well-sm"ng-show="quiz.finalise">
+            <div class="well well-sm" ng-show="quiz.finalise">
                 <div class="row">
                     <div class="col-xs-12">
                         <h3>Are you sure you want to submit your answers?</h3>
                         <button class="btn btn-success" ng-click="quiz.finaliseAnswers()">Yes</button>
-                        <button class="btn btn-danger" ng-click="quiz.finalise = false">No</button>
+                        <button class="btn btn-danger" ng-click="quiz.finalise == false">No</button>
                     </div>
                 </div>
             </div>
         </div><!-- question row -->
+    </div><!-- quiz controller -->
+
+    <div ng-controller="resultCtrl as results" ng-show="results.quizMetrics.resultActive">
+        <h1>Hello world</h1>
     </div>
 </div>
 <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
@@ -169,5 +173,6 @@ integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7T
 <script src= "js/Controllers/quiz.js"></script>
 <script src="js/Factories/quizMetrics.js"></script>
 <script src="js/Factories/DataService.js"></script>
+<script src = "js/Controllers/results.js"></script>
 </body>
 </html>
