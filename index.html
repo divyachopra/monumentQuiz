@@ -192,7 +192,12 @@
                 </div>
             </div>
         </div><!-- row-->
-
+        <div class="row">
+        <div class="col-xs-12 top buffer">
+            <h2>Your scpred {{results.quizMetrics.numCorrect}} / {{results.DataService.quizQuestions.length}}</h2>
+            <h2><strong>{{results.calculatePercentage()|number:2}}%</strong></h2>
+        </div>
+        </div>
         <div class="row">
             <h1>Questions:</h1>
             <div class="well well-sm">
