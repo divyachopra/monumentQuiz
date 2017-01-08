@@ -14,6 +14,20 @@ function ResultController(quizMetrics,DataService){
     vm.getAnswerClass=getAnswerClass;
     vm.setActiveQuestion = setActiveQuestion;
     vm.calculatePercentage = calculatePercentage;
+    vm.reset=reset;
+
+    function reset() {
+
+        quizMetrics.changeState("results",false);
+        quizMetrics.numCorrect=0;
+        for(var i=0; i<DataService.quizQuestions.length;i++)
+        {
+            var data= DataService.quizQuestions[i];
+            data.selected=null;
+            data.correct=null;
+
+        }
+    }
     
     function calculatePercentage() {
 
