@@ -14,23 +14,23 @@ function DataFactory(){
 
     return dataObj;
 }
-var correctAnswers =[1,2,3,0,2,0,3,2,0,3];
+var correctAnswers =[1,2,0,2,1,0,2,3,1,2];
 var quizQuestions =[
     {
         type: "text",
-        text: "How much can a loggerhead weigh?",
+        text: "When was Wat Phra Si Sanphet, Thailand built?",
         possibilities: [
             {
-                answer: "Up to 20kg"
+                answer: "1548 AD"
             },
             {
-                answer: "Up to 115kg"
+                answer: "1448 AD"
             },
             {
-                answer: "Up to 220kg"
+                answer: "1558 AD"
             },
             {
-                answer: "Up to 500kg"
+                answer: "1458 AD"
             }
         ],
         selected: null,
@@ -38,19 +38,19 @@ var quizQuestions =[
     },
     {
         type: "text",
-        text: "What is the typical lifespan of a Green Sea Turtle?",
+        text: "Where is Angkor Wat located on map?",
         possibilities: [
             {
-                answer: "150 years"
+                answer: "India"
             },
             {
-                answer: "10 years"
+                answer: "Sri Lanka"
             },
             {
-                answer: "80 years"
+                answer: "Cambodia"
             },
             {
-                answer: "40 years"
+                answer: "Thailand"
             }
         ],
         selected: null,
@@ -58,19 +58,19 @@ var quizQuestions =[
     },
     {
         type: "image",
-        text: "Which of these is the Alligator Snapping Turtle?",
+        text: "Which of the following is a temple situated in Thailand?",
         possibilities: [
             {
-                answer: "https://c1.staticflickr.com/3/2182/2399413165_bcc8031cac_z.jpg?zz=1"
+                answer: "https://www.placestoseeinyourlifetime.com/wp-content/uploads/2013/05/sunny.jpg"
             },
             {
-                answer: "http://images.nationalgeographic.com/wpf/media-live/photos/000/006/cache/ridley-sea-turtle_688_600x450.jpg"
+                answer: "https://www.placestoseeinyourlifetime.com/wp-content/uploads/2015/07/Petra-by-Night-in-Jordan.-by-Fadi-Bargoti-740x494.jpeg"
             },
             {
-                answer: "https://static-secure.guim.co.uk/sys-images/Guardian/Pix/pictures/2011/8/13/1313246505515/Leatherback-turtle-007.jpg"
+                answer: "https://www.placestoseeinyourlifetime.com/wp-content/uploads/2015/07/Angkor-Wat-by-Chaluntorn-Preeyasombat-740x492.jpeg"
             },
             {
-                answer: "https://upload.wikimedia.org/wikipedia/commons/e/e3/Alligator_snapping_turtle_-_Geierschildkr%C3%B6te_-_Alligatorschildkr%C3%B6te_-_Macrochelys_temminckii_01.jpg"
+                answer: "https://www.placestoseeinyourlifetime.com/wp-content/uploads/2013/05/guijt.jpg"
             }
         ],
         selected: null,
@@ -78,19 +78,19 @@ var quizQuestions =[
     },
     {
         type: "image",
-        text: "Which of these is the Green Turtle?",
+        text: "Which of the following is Hagia Sophia, a famous museum situated in Istanbul, Turkey ?",
         possibilities: [
             {
-                answer: "https://dgpsnews.files.wordpress.com/2012/04/green-turtle.jpg"
+                answer: "https://www.placestoseeinyourlifetime.com/wp-content/uploads/2013/05/elia.jpg"
             },
             {
-                answer: "https://upload.wikimedia.org/wikipedia/commons/7/7f/Kemp's_Ridley_sea_turtle_nesting.JPG"
+                answer: "https://www.placestoseeinyourlifetime.com/wp-content/uploads/2013/05/guijt.jpg"
             },
             {
-                answer: "https://upload.wikimedia.org/wikipedia/commons/e/e3/Alligator_snapping_turtle_-_Geierschildkr%C3%B6te_-_Alligatorschildkr%C3%B6te_-_Macrochelys_temminckii_01.jpg"
+                answer: "https://www.placestoseeinyourlifetime.com/wp-content/uploads/2013/05/yonka.jpg"
             },
             {
-                answer: "http://assets.worldwildlife.org/photos/163/images/carousel_small/SCR_290360hawskbill-why-matter-LG.jpg?1345565532"
+                answer: "https://www.placestoseeinyourlifetime.com/wp-content/uploads/2013/05/elia.jpg"
             }
         ],
         selected: null,
@@ -98,19 +98,19 @@ var quizQuestions =[
     },
     {
         type: "text",
-        text: "Where does the Kemp's Ridley Sea Turtle live?'",
+        text: "Which Mughal Emperor built Taj Mahal",
         possibilities: [
             {
-                answer: "Tropical waters all around the world"
+                answer: "Akbar"
             },
             {
-                answer: "Eastern Australia"
+                answer: "Shah Jahan"
             },
             {
-                answer: "Coastal North Atlantic"
+                answer: "Aurangzeb"
             },
             {
-                answer: "South pacific islands"
+                answer: "Humayun"
             }
         ],
         selected: null,
@@ -118,19 +118,19 @@ var quizQuestions =[
     },
     {
         type: "text",
-        text: "What is the most common turtle in US waters?",
+        text: " Which of the following has served as a cathedral, mosque and now a museum? ",
         possibilities: [
             {
-                answer: "Loggerhead turtle"
+                answer: "Hagia Sophia, Istanbul"
             },
             {
-                answer: "Leatherback turtle"
+                answer: "Fatih Mosque, Istanbul"
             },
             {
-                answer: "Hawksbill Turtle"
+                answer: "Sultan Ahmed Mosque, Istanbul"
             },
             {
-                answer: "Alligator Snapping Turtle"
+                answer: "Alâeddin Mosque, Konya"
             }
         ],
         selected: null,
@@ -138,19 +138,19 @@ var quizQuestions =[
     },
     {
         type: "text",
-        text: "What is the largest sea turtle on earth?",
+        text: "When was Leaning Tower of Pissa Built?",
         possibilities: [
             {
-                answer: "Eastern Snake Necked Turtle"
+                answer: "1352"
             },
             {
-                answer: "Olive Ridley Sea Turtle"
+                answer: "1252"
             },
             {
-                answer: "Kemp's Ridley Sea Turtle'"
+                answer: "1372"
             },
             {
-                answer: "Leatherback"
+                answer: "1272"
             }
         ],
         selected: null,
@@ -158,19 +158,19 @@ var quizQuestions =[
     },
     {
         type: "image",
-        text: "Which of these is the Olive Ridley Turtle?",
+        text: "Which of the following is the Colosseum,Italy?",
         possibilities: [
             {
-                answer: "http://i.telegraph.co.uk/multimedia/archive/02651/loggerheadTurtle_2651448b.jpg"
+                answer: "https://www.placestoseeinyourlifetime.com/wp-content/uploads/2013/05/sunny.jpg"
             },
             {
-                answer: "http://assets.worldwildlife.org/photos/163/images/carousel_small/SCR_290360hawskbill-why-matter-LG.jpg?1345565532"
+                answer: "https://www.placestoseeinyourlifetime.com/wp-content/uploads/2013/05/yonka.jpg"
             },
             {
-                answer: "http://images.nationalgeographic.com/wpf/media-live/photos/000/006/cache/ridley-sea-turtle_688_600x450.jpg"
+                answer: "https://www.placestoseeinyourlifetime.com/wp-content/uploads/2015/07/Giza-Pyramids-by-Quim-Granell.jpeg"
             },
             {
-                answer: "https://upload.wikimedia.org/wikipedia/commons/7/7f/Kemp's_Ridley_sea_turtle_nesting.JPG"
+                answer: "https://www.placestoseeinyourlifetime.com/wp-content/uploads/2013/05/elia.jpg"
             }
         ],
         selected: null,
@@ -178,19 +178,19 @@ var quizQuestions =[
     },
     {
         type: "text",
-        text: "How Heavy can a leatherback turtle be?",
+        text: "Which of the following is known as \"Rose of the desert\"?",
         possibilities: [
             {
-                answer: "900kg"
+                answer: "Qasr Amra, Jordan"
             },
             {
-                answer: "40kg"
+                answer: "Petra, Jordan"
             },
             {
-                answer: "110kg"
+                answer: "Al-Karak, Jordan"
             },
             {
-                answer: "300kg"
+                answer: "Hagia Sophia, Turkey"
             }
         ],
         selected: null,
@@ -198,19 +198,19 @@ var quizQuestions =[
     },
     {
         type: "text",
-        text: "Which of these turtles are herbivores?",
+        text: "Which of the following is oldest of the seven wonders of ancient world?",
         possibilities: [
             {
-                answer: "Loggerhead Turtle"
+                answer: "Statue of Zeus at Olympia"
             },
             {
-                answer: "Hawksbill Turtle"
+                answer: "Temple of Artemis"
             },
             {
-                answer: "Leatherback Turtle"
+                answer: "Great Pyramid of Giza"
             },
             {
-                answer: "Green Turtle"
+                answer: "Hanging Gardens of Babylon"
             }
         ],
         selected: null,
